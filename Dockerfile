@@ -1,20 +1,21 @@
 # Используем официальный Node.js образ
 FROM node:20-alpine
 
-# Устанавливаем рабочую директорию внутри контейнера
+# Рабочая директория внутри контейнера
 WORKDIR /app
 
-# Копируем package.json и package-lock.json
-COPY package*.json ./
+# Копируем package.json (и lock, если есть)
+COPY package.json ./
+COPY package-lock.json* ./
 
-# Устанавливаем зависимости
-RUN npm install --production
+# Устанавливаем все зависимости
+RUN npm install
 
-# Копируем остальной код проекта
+# Копируем остальной код
 COPY . .
 
 # Пробрасываем порт
 EXPOSE 5000
 
-# Указываем команду запуска
+# Команда запуска
 CMD ["npm", "start"]
