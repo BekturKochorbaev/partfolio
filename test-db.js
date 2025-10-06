@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 
 // Подключаемся с параметрами из config.json
 const sequelize = new Sequelize('teacher_portfolio', 'postgres', '12345678', {
-  host: '127.0.0.1',
+  host: 'db',
   dialect: 'postgres',
 });
 
