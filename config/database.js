@@ -4,7 +4,7 @@ require('dotenv').config(); // 👈 Обязательно для загрузк
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
-  process.env.DB_PASS, // пароль к базе данных
+  process.env.DB_PASSWORD, // пароль к базе данных
   {
     host: process.env.DB_HOST,
     dialect: 'postgres',
