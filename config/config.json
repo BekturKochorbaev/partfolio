@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "12345678",
+    "database": "teacher_portfolio",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "12345678",
+    "database": "teacher_portfolio_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "12345678",
+    "database": "teacher_portfolio_prod",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
