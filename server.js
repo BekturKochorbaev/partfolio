@@ -106,7 +106,9 @@ const PORT = process.env.PORT || 5000;
 sequelize.sync({ alter: true })
   .then(() => {
     console.log("✅ Таблицы синхронизированы");
-    app.listen(PORT, () => console.log(`🚀 Сервер запущен на порту ${PORT}`));
+    app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Сервер запущен на порту ${PORT}`);
+});
   })
   .catch((err) => {
     console.error("❌ Ошибка при синхронизации:", err);
